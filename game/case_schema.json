@@ -1,0 +1,54 @@
+{
+  "case_id": "CASE-26-8849",
+  "title": "The St. Jude Exchange Homicide",
+  "evidence": [
+    {
+      "id": "E_CCTV",
+      "name": "Alley Traffic Camera Footage",
+      "raw_description": "Unenhanced video timestamped 22:15 at 4th Street corner.",
+      "inspected": false,
+      "analyzed_data": "Facial recognition matches Elena Rostova stationary near delivery gate."
+    },
+    {
+      "id": "E_FIREARM",
+      "name": "Discarded 9mm Service Pistol",
+      "raw_description": "Recovered from storm drain two blocks north of exchange.",
+      "inspected": false,
+      "analyzed_data": "Ballistics match fatal slug in guard. Latent palm print matches Marcus Vance."
+    }
+  ],
+  "suspects": {
+    "elena": {
+      "name": "Elena Rostova",
+      "role": "Warehouse Worker / Accused Lookout",
+      "base_stress": 20.0,
+      "composure_decay": 2.5,
+      "trust_factor": 1.0,
+      "claims": [
+        {
+          "id": "CLM_ELENA_ALIBI",
+          "statement": "I was waiting at the bus stop on 4th Street looking at my phone the entire time.",
+          "contradicted_by": "E_CCTV",
+          "break_stress_spike": 45.0,
+          "admission": "Alright! I was standing by the delivery gate, but Marcus swore it was just an after-hours insurance grab! I never went inside!"
+        }
+      ]
+    },
+    "marcus": {
+      "name": "Marcus Vance",
+      "role": "Known Safecracker / Suspected Shooter",
+      "base_stress": 15.0,
+      "composure_decay": 1.8,
+      "trust_factor": 0.5,
+      "claims": [
+        {
+          "id": "CLM_MARCUS_ALIBI",
+          "statement": "I was three miles away having beers at O'Malley's Pub paying cash.",
+          "contradicted_by": "E_FIREARM",
+          "break_stress_spike": 55.0,
+          "admission": "The guard lunged at me with a baton in the dark! The gun discharged by accident during the struggle!"
+        }
+      ]
+    }
+  }
+}
